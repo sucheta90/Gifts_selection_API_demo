@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Reviews</title>
+  </head>
+  <body>
+    <h1>Add a Review</h1>
+    <h3><%= product.item %></h3>
+    <form action="/gifts/<%= product.id%>/review " method="Post">
+      <label for="author">Name</label>
+      <input type="text" placeholder="Name here" id="author" name="author" />
+      <br />
+      <section>
+        <p></p>
+        <label for="review">Add comment here</label>
+        <br />
+        <textarea type="text" id="review" rows="5" cols="30" name="review">
+        </textarea>
+      </section>
+      <button>Save</button>
+      <a href="/gifts">Back</a>
+    </form>
+  </body>
+</html>
+
+<!-- -->

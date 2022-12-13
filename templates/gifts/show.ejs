@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Details</title>
+  </head>
+  <body>
+    <h1><%= product.item %></h1>
+    <h4><%= product.id %></h4>
+    <h4>Price: <%= product.price %></h4>
+    <p><h4>Description: </h4> <%= product.description%></p>
+    <div>
+      <h4>Reviews</h4>
+      <ul>
+        <% for(let review of product.reviews){ %>
+            <% if(review.review){ %>
+                <li> <%= review.review %> - <b><%= review.author %> </b>  </li>
+            <%} %>
+            
+        <% }%>
+      </ul>
+      <br />
+      <a href="/gifts/<%= product.id %>/review">Add Reviews</a>
+      
+    </div>
+    <a href="/gifts">Back</a>
+  </body>
+</html>

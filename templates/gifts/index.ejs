@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+  </head>
+  <body>
+    <h1>All Gifts</h1>
+    <ul>
+      <% for(let p of productList){ %>
+      <li>
+        <div>
+          <h2><%= p.item %></h2>
+
+          <!-- <id><%= p.id %></id> -->
+          <!-- <p><%= p.description%></p>
+          <h4>Price: <%=p.price%></h4> -->
+          <a href="gifts/<%=p.id %>">Details</a>
+        </div>
+      </li>
+      <% }%>
+    </ul>
+  </body>
+</html>
