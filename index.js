@@ -18,7 +18,7 @@ let productList =[
         price: '$15.99' ,
         reviews:[
             {
-                author: 'AnonyMous',
+                author: 'Elfie',
                 review: "This is one of my favorites go to gift for any occaion" 
             }
         ] 
@@ -31,7 +31,7 @@ let productList =[
         price: '$14.99',
         reviews:[
             {
-                author:'ChocolateBoi',
+                author:'Mr.Clause',
                 review: 'Finest of chocolates'
             }
         ]
@@ -72,6 +72,10 @@ app.get('/gifts', (req,res)=>{
     res.render('gifts/index', {productList})
 })
 
+app.get('/', (req,res)=>{
+    // redirect to the home gifts page
+    res.redirect('/gifts')
+})
 app.get('/gifts/:id', (req,res)=>{
     const {id} = req.params;
     const product = productList.find(e => e.id === id);
